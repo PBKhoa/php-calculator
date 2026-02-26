@@ -1,49 +1,67 @@
 <?php
-$result = "";
+$screen = "0";
 
-if (isset($_POST['submit'])) {
-    $a = $_POST['a'];
-    $b = $_POST['b'];
-    $op = $_POST['op'];
+if (isset($_POST['btn'])) {
+    $screen = $_POST['screen'];
+    $btn = $_POST['btn'];
 
-    switch ($op) {
-        case '+':
-            $result = $a + $b;
-            break;
-        case '-':
-            $result = $a - $b;
-            break;
-        case '*':
-            $result = $a * $b;
-            break;
-        case '/':
-            $result = $b != 0 ? $a / $b : "Không thể chia cho 0";
-            break;
+    if ($btn == "C") {
+        $screen = "0";
+    } elseif ($btn == "=") {
+        try {
+            $screen = eval("return $screen;");
+        } catch (Throwable $e) {
+            $screen = "Error";
+        }
+    } else {
+        if ($screen == "0") {
+            $screen = $btn;
+        } else {
+            $screen .= $btn;
+        }
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>PHP Calculator</title>
+    <meta charset="UTF-8">
+    <title>May tinh</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="calculator">
-        <h2>Máy tính</h2>
-        <form method="post">
-            <input type="number" name="a" required>
-            <select name="op">
-                <option value="+">+</option>
-                <option value="-">-</option>
-                <option value="*">*</option>
-                <option value="/">/</option>
-            </select>
-            <input type="number" name="b" required>
-            <button type="submit" name="submit">=</button>
-        </form>
-        <h3>Kết quả: <?php echo $result; ?></h3>
+
+<div class="display">
+<form method="post">
+
+    <input type="text" name="screen" value="<?php echo $screen; ?>" readonly>
+
+    <div class="btn">
+        <button type="submit" name="btn" value="7">7</button>
+        <button type="submit" name="btn" value="8">8</button>
+        <button type="submit" name="btn" value="9">9</button>
+        <button type="submit" name="btn" value="/">/</button>
+
+        <button type="submit" name="btn" value="4">4</button>
+        <button type="submit" name="btn" value="5">5</button>
+        <button type="submit" name="btn" value="6">6</button>
+        <button type="submit" name="btn" value="*">*</button>
+
+        <button type="submit" name="btn" value="1">1</button>
+        <button type="submit" name="btn" value="2">2</button>
+        <button type="submit" name="btn" value="3">3</button>
+        <button type="submit" name="btn" value="-">-</button>
+
+        <button type="submit" name="btn" value="0">0</button>
+        <button type="submit" name="btn" value=".">.</button>
+        <button type="submit" name="btn" value="=">=</button>
+        <button type="submit" name="btn" value="+">+</button>
+
+        <button type="submit" name="btn" value="C">C</button>
     </div>
+
+</form>
+</div>
+
 </body>
 </html>
