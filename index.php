@@ -30,7 +30,7 @@ if (isset($_POST['btn'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <h1> Người đẹp zai nhất thế giới<h1>
 <div class="display">
 <form method="post">
 
