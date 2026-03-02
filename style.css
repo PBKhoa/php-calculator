@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-color: rgba(rgb(194, 181, 181), rgb(137, 138, 137), rgb(100, 100, 129), 0.2);
     display: flex;
@@ -62,4 +63,98 @@ button[value="="] {
 
 button[value="C"] {
     background-color: #aa4444;
+=======
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  
+}
+
+.box {
+  
+  width: 150px;
+  padding: 20px;
+  background: lightgray;
+  outline: 3px groove rgb(32, 31, 31);
+  outline-offset: 4px;
+  border-radius: 22px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+.box:hover {
+  background: rgb(228, 204, 141);
+  color: white;
+}
+.box p {
+  margin: 0;
+  line-height: 1;      
+  font-size: 20px;
+  font-weight: bold;
+}
+
+p {
+  
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+svg {
+  transform: translateX(3px);
+  width: 19px;
+  height: 19px;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: lightgray;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+    
+
+}
+
+.btn:hover {
+  background: rgb(105, 105, 105);
+  color: white;
+  justify-content: center;
+  align-items: center; 
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+>>>>>>> clone
 }
