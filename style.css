@@ -1,7 +1,7 @@
 .container {
     display: flex;
-    justify-content: center;  /* căn giữa ngang */
-    align-items: center;      /* căn giữa dọc */
+    justify-content: center;  
+    align-items: center;     
     height: 100vh;
 }
 
