@@ -13,7 +13,8 @@
 }
 
 .box {
-  width: 200px;
+  max-width: 200%;
+  width: 100%;
   padding: 20px;
   background: lightgray;
   outline: 3px groove rgb(32, 31, 31);
@@ -52,4 +53,39 @@ svg {
   transform: translateX(3px);
   width: 19px;
   height: 19px;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: lightgray;
+  border-radius: 20px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+    
+
+}
+
+.btn:hover {
+  background: rgb(105, 105, 105);
+  color: white;
+  justify-content: center;
+  align-items: center; 
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
